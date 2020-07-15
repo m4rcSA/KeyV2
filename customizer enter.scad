@@ -288,7 +288,7 @@ module dcs_row(row=3, column=0) {
   $width_difference = 6;
   $height_difference = 4;
   $dish_type = "cylindrical";
-  $dish_depth = 1.5;
+  $dish_depth = 0.5;
   $dish_skew_x = 0;
   $dish_skew_y = 0;
   $top_skew = 1.75;
@@ -4518,6 +4518,7 @@ if (!$using_customizer) {
 }
 
 
-key_profile(key_profile, row) legend(legend) {
-   key();
+key_profile(key_profile, row) legend(legend,[1,0.5]) {
+   $stem_positions = [[-5, 0]];
+   enter() key();
 }
